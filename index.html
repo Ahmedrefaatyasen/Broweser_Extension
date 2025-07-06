@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./index.css">
+    <title> browser-extensions-manager-ui-main</title>
+</head>
+<body>
+    <section class="container">
+       <div class="header">
+        <img src="./assets/images/logo.svg" alt="Logo" class="logo"/>
+        <img src="./assets/images/icon-sun.svg" alt="Sun Icon" id="icon-sun" class="icon-sun"/>
+       </div>
+         <div class="content">
+          <div class="content-header">
+          <h1>Extensions List</h1>
+          <div>
+            <button type="button" onclick="getData()" class="btn-all">All</button>
+            <button type="button" class=" btn-active" onclick="activeData()"> Active</button>
+            <button type="button" class=" btn-inactive" onclick="inactiveData()">Inactive</button>
+          </div>
+
+          </div>
+          
+        <div class="extensions" id="extensions">
+            <!-- Extensions will be displayed here -->
+         </div>
+    </section>
+    <script src="./index.js" ></script>
+    
+</body>
+</html>

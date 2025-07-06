@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+ 
+    
+    padding:20px 100px ;
+
+    background-color: #050a1d;
+  
+}
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2535;
+    border-radius: 10px;
+    padding: 10px;
+}
+.container .header img {
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.content .content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .content-header h1 {
+    font-size: 24px;
+    color: #f9fafb;
+}
+.content .content-header button {
+    background-color: #2f354b;
+    color: #d2d6de;
+    border: none;
+    padding: 10px 20px ;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+.content .content-header button:focus {
+    border: 1px solid #ee5d56;
+}
+.content .content-header button:hover {
+    background-color:#ee5d56;
+    color: #461d38;
+}
+.extensions{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.extension{
+   
+    background-color: #1f2535;
+    border-radius: 10px;
+    max-width: 400px;
+    padding: 10px 20px;
+}
+.extension-info{
+    display: flex;
+    align-items: center;
+    
+    gap: 20px;
+}
+.extension-info p {
+   color: #646773;
+}
+.extension-info h1{
+    color:#eceff1;
+}
+.extension-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.extension-actions button {
+    background-color: #2f354b;
+    color: #d2d6de;
+    border: none;
+    padding: 10px 20px ;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+.extension-actions button:hover {
+    background-color: #ee5d56;
+    color: #461d38;
+}
+.extension-actions button:focus{
+    border: 1px solid #ee5d56;
+}
+.extension-actions .switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+
+}
+.extension-actions .switch input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.extension-actions .switch .slider{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+
+
+}
+.extension-actions .switch .slider::before{
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .5s;
+}
+.extension-actions .switch input:checked + .slider{
+    background-color: #ee5d56;
+}
+.extension-actions .switch input:checked+ .slider::before{
+    transform: translateX(26px);
+}
+
+.light-mode .container {
+    background-color: #ebf4fb;
+    color: #050a1d;
+}
+.light-mode .container .header {
+    background-color: #fcfdff;
+}
+.light-mode .container button{
+    background-color: #fcfdff;
+    color: #888e9c;
+}
+.light-mode .container .content .content-header h1 {
+    color: #0b143b;
+}
+.light-mode .container .extensions .extension {
+    background-color: #fcfdff;
+
+}
+.light-mode .container .extensions .extension-info h1{
+    color: #141c38;
+}
+.light-mode .container .extensions .extension-info p {
+    color: #8c8c93;
+}
+.light-mode .container .extensions .extension-actions button {
+    background-color: #fcfdff;
+    color: #888e9c;
+    border: 1px solid #8c8c93
+}
+.light-mode .container .extensions .extension-actions button:hover {
+    background-color: #ee5d56;
+    color: #461d38;
+}
+.light-mode .container button:focus{
+    border: 1px solid #ee5d56;
+}
+
+@media screen and (max-width:750px){
+
+
+.container .content .content-header{
+    display: flex;
+    flex-direction: column;
+}
+    
+}
+
